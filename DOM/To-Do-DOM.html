@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let gloablID = 0;
+
+        function changeBTN(id){
+            let bttn = document.getElementById(id);
+            bttn.innerHTML = "Done!";
+        }
+
+        function create(Task, Details, thisID){
+            let showTask = document.createElement('div');
+            showTask.setAttribute('id', "showTask");
+            let showDetails = document.createElement('div');
+            showDetails.setAttribute('id', "showDetails");
+            let btn = document.createElement('button');
+            btn.setAttribute('id', thisID);
+            btn.innerHTML = "Mark as Done";
+            showTask.innerHTML = Task;
+            btn.setAttribute("onclick", `changeBTN(${thisID})`);                      //
+            showDetails.innerHTML = Details;
+            let bundleOf3 = document.createElement('div');
+            bundleOf3.appendChild(showTask);
+            bundleOf3.appendChild(showDetails);
+            bundleOf3.appendChild(btn);
+            //bundleOf3.setAttribute('id', thisID);
+            return bundleOf3;
+        }
+
+        function Add(){
+            gloablID++;
+            const Task = document.getElementById("Task").value;
+            const Details = document.getElementById("Details").value;
+            let mainDiv = document.getElementById("mainDiv");
+            mainDiv.appendChild(create(Task, Details, gloablID));
+            
+        }
+    </script>
+
+    <input style="margin: 15px;" id="Task" type="text" placeholder="Task"> <br>
+    <input style="margin: 15px;" id="Details" type="text" placeholder="Details"> <br>
+    <button style="margin: 15px;" onclick="Add()">Add Task</button> <br>
+    <div style="margin: 15px;" id="mainDiv"></div>
+</body>
+</html>
