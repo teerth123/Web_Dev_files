@@ -1,0 +1,111 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACE_Figma</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="vanilla.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #F2F3F2;
+        }
+        .container {
+            padding-top: 135px; /* Adjust this value based on the height of your fixed header */
+        }
+        #navBar{
+            position: fixed;
+            top: 65px;
+            left: 140px;
+            right: 140px;
+            background-color: white;
+            padding: 20px;
+            height: 50px;
+            border-radius: 65px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        body {
+            background-color: #F2F3F2;
+            transition: background-color 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="navBar">
+            <div><h1 style="margin: 0 20px;">PACE</h1></div>
+            <div style="display: flex; align-items: center; font-size: 14px;">
+                <h3 style="margin: 0 25px; color: #535050;">Activities</h3>
+                <h3 style="margin: 0 25px; color: #535050;">Members</h3>
+                <h3 style="margin: 0 25px; color: #535050;">History</h3>
+                <h1 style="font-size: 22px; margin: 0 10px; border-radius: 30px; padding: 15px; background: #007bff; border: 15px solid transparent; background-clip: padding-box;">Join us</h1>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin: 90px 140px;">
+            <div id="left" style="width: 40%; height: 550px; background-color: white; border-radius: 65px; position: relative;">
+                <h1 style="position: absolute; top: 30px; left: 50px; background-color: #E6E6E7; font-size: 22px; border: solid #E6E6E7; border-radius: 8px; display: inline; padding: 10px; font-weight: 900;">Club at WCE</h1>
+                <h1 style="line-height: 1; font-size: 48px; margin: 120px 50px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">PERSONALITY <br> ADVANCEMENT <br> CIRCLE OF <br> ENGINEERS</h1>
+                <h2 style="margin: -80px 50px; color: #535050;">
+                    Scaling New Heights <br> 
+                    Since 1995
+                </h2>
+                <h1 style="position: absolute; bottom: 10px; left: 36px; font-size: 28px; border-radius: 25px; padding: 15px; background: #007bff; border: 15px solid transparent; background-clip: padding-box;">Join us</h1>
+            </div>
+            <div id="right" style="width: 56%; height: 550px; background-color: white; border-radius: 65px; overflow: hidden;">
+                <iframe src='https://my.spline.design/untitled-627e2c204107cb0d64ddc6f4b0e9e98b/' frameborder='0' width='100%' height='100%' style="border-radius: 65px;"></iframe>            </div>
+        </div>
+    </div>
+    <div id="cards" style="display: flex; justify-content: center; top: 100px; margin-bottom: 20px;">
+        <div style="width: 28%; height: 600px; background-color: 202120; border-radius: 65px; position: relative; margin-left: 15px;">
+            <img src="Screenshot 2024-07-10 180853.png" alt="" style="width: 45%; height: 30%; object-fit: cover; margin-top: 100px; margin-left: 110px; align-items: center; justify-content: center;">
+            <h1 style="margin-top: 5%; margin-left: 30%; color: white; font-size: 70px;">Goal</h1>
+            <h3 style="color: white; margin-top: 18%; margin-left: 6%; padding: 4px;">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+        <div style="width: 28%; height: 600px; background-color: 2B2A2A; border-radius: 65px; position: relative; margin-left: 15px;">
+            <img src="Screenshot 2024-07-10 181904.png" alt="" style="width: 45%; height: 30%; object-fit: cover; margin-top: 105px; margin-left: 110px; align-items: center; justify-content: center;">
+            <h1 style="margin-top: 5%; margin-left:25%; color: white; font-size: 70px;">Motive</h1>
+            <h3 style="color: white; margin-top: 15%; margin-left: 6%; padding: 4px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fugit fuga porro quod!</h3>
+        </div>
+        <div style="width: 28%; height: 600px; background-color: 373637; border-radius: 65px; position: relative; margin-left: 15px;">
+            <img src="Screenshot 2024-07-10 182444.png" alt="" style="width: 45%; height: 30%; object-fit: cover; margin-top: 105px; margin-left: 110px; align-items: center; justify-content: center;">
+            <h1 style="margin-top: 5%; margin-left: 35%; color: white; font-size: 70px;">Aim</h1>
+            <h3 style="color: white; margin-top: 15%; margin-left: 6%; padding: 4px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fugit fuga porro quod!</h3>
+        </div>
+        
+    </div>
+    <div id="last_Page" style="display: flex; justify-content: space-around; margin: 90px 100px;">
+        <div style="width: 48%; background-color: #202120; height: 550px; border-radius: 65px;" >
+            <img src="Screenshot 2024-07-10 183916.png" style="width: 45%; height: 38%; object-fit: cover; margin-top: 80px; margin-left: 150px; align-items: center; justify-content: center;">
+            <h3 style="width: 75%; align-content: center; color: white; margin-top: 50px; margin-left: 75px; font-size: 35px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptatibus.</h3>
+        </div>
+        <div style="width: 48%; height: 550px;">
+            <div style="display: flex; justify-content: space-between;">
+                <div style="width: 300px; height: 300px; background-color: D9D9D9; margin: 5px; border-radius: 50px;">
+                    <h2 style="margin: 40% 15%; width: 100%; font-size: 36px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Gaikwad Sir</h2>
+                    <h3 style="margin: -100px 78px; width: 100%; font-size: 22px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Staff Advisor</h3>
+                </div>
+                <div style="width: 300px; height: 300px; background-color: FAFBFA; margin: 5px; border-radius: 50px; justify-content: center; align-items: center; overflow: hidden;">
+                    <img src="Screenshot 2024-07-10 202601.png" alt="" width="100%"; height="100%; object-fit:cover; margin: 10px 5px; border-radius:65px" >
+                </div>
+            </div>
+            <div style="width: 100%; height: 225px; background-color: 202120; margin-top: 10px; border-radius: 40px; justify-content: center; align-items: center; display: flex;">
+                <h2 style="width: 85%; padding: 5px; color: D9D9D9; font-size: 26px;">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sit ipsa, architecto et nobis dolorum!"</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div style="display: flex; margin-left: 85%; margin-top: -55px; ">
+        <h2 style="font-size: 22px; color: 3F403F ; border-color: FF5733 ; border: solid; border-radius: 22px; padding: 15px; justify-content: center; align-items: center;">View Gallery</h2>
+        <h1 style="margin: 28px 10px; color: FF5733;">→</h1>
+    </div>
+</body>
+</html>
+
+  
